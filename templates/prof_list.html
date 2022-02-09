@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Список профессий</h2>
+    {% if list == 'ol' %}
+        {% for i in range(len(profs)) %}
+            <div>{{item[i]}}</div>
+        {% endfor %}
+    {% elif list == 'ul' %}
+        {% for item in news['news'] %}
+            <div>{{item}}</div>
+        {% endfor %}
+    {% else %}
+        <div>aaaa</div>
+    {% endif %}
+{% endblock %}
