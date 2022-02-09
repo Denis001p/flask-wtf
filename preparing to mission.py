@@ -4,10 +4,10 @@ app = Flask(__name__)
 
 
 @app.route('/')
-@app.route('/index')
-def index():
+@app.route('/index/<title>')
+def index(title):
     param = {}
-    param['title'] = 'Mars colonisation'
+    param['title'] = title
     return render_template('base.html', **param)
 
 
