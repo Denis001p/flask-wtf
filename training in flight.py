@@ -4,17 +4,11 @@ app = Flask(__name__)
 
 
 @app.route('/')
-@app.route('/index')
-def index():
+@app.route('/list_prof/<list>')
+def training(list):
     param = {}
-    param['title'] = 'Mars colonisation'
-    return render_template('base.html', **param)
-
-
-@app.route('/training/<prof>')
-def training(prof):
-    param = {}
-    param['prof'] = prof
+    param['list'] = list
+    param['profs'] = []
     return render_template('training.html', **param)
 
 
