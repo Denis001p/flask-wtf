@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/index')
 def index():
     param = {}
-    param['title'] = 'Заготовка'
+    param['title'] = 'Mars colonisation'
     return render_template('base.html', **param)
 
 
